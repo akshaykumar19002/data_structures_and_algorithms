@@ -268,12 +268,19 @@ public class LinkedList {
 	 */
 	public Object removeLast() {
 		Node temp = head;
+		Object value = null;
 		if (temp == null)
 			throw new NoSuchElementException();
+		if (head.next == null) {
+			value = head.data;
+			head  = null;
+			return value;
+		}
+			
 		while (temp.next != null && temp.next.next != null) {
 			temp = temp.next;
 		}
-		Object value = temp.next.data;
+		value = temp.next.data;
 		temp.next = null;
 		return value;
 	}
