@@ -2,12 +2,22 @@ package datastructures;
 
 import java.util.EmptyStackException;
 
+/**
+ * Stack Implementation using Array
+ * @author Akshay Kumar
+ *
+ * @param <T>
+ */
 public class Stack<T> {
 	
 	private Object data[];
 	private int top = -1;
 	private int size = 0;
 	
+	/**
+	 * Constructor for creating stack
+	 * @param size - the size of the stack
+	 */
 	public Stack(int size){
 		this.size = size;
 		this.data = new Object[size];

@@ -2,10 +2,18 @@ package datastructures;
 
 import java.util.EmptyStackException;
 
+/**
+ * Dynamic Stack using LinkedList
+ * @author Akshay Kumar
+ *
+ */
 public class DynamicStack {
 
 	private LinkedList stack;
 	
+	/**
+	 * Initializes the stack
+	 */
 	public DynamicStack(){
 		this.stack = new LinkedList();
 	}

@@ -2,6 +2,11 @@ package datastructures;
 
 import java.util.NoSuchElementException;
 
+/**
+ * Singly LinkedList
+ * @author Akshay Kumar
+ *
+ */
 public class LinkedList {
 
 	private class Node {
