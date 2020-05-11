@@ -1,6 +1,7 @@
 package test.problems.arrayString;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 import main.problems.arrayString.UniqueString;
 
@@ -15,42 +16,42 @@ public class TestUniqueString {
 	public void validWithUnique() {
 		UniqueString problem = new UniqueString();
 		String testString = "test";
-		assertEquals(problem.isUnique(testString), false);
+		assertFalse(problem.isUnique(testString));
 	}
 	
 	@Test
 	public void validWithNonUnique() {
 		UniqueString problem = new UniqueString();
 		String testString = "abcdef";
-		assertEquals(problem.isUnique(testString), true);
+		assertTrue(problem.isUnique(testString));
 	}
 	
 	@Test
 	public void validSecondWayWithUnique() {
 		UniqueString problem = new UniqueString();
 		String testString = "test";
-		assertEquals(problem.checkUnique(testString), false);
+		assertFalse(problem.checkUnique(testString));
 	}
 	
 	@Test
 	public void validSecondWayWithNonUnique() {
 		UniqueString problem = new UniqueString();
 		String testString = "abcdef";
-		assertEquals(problem.checkUnique(testString), true);
+		assertTrue(problem.checkUnique(testString));
 	}
 	
 	@Test
 	public void validThirdWayWithUnique() {
 		UniqueString problem = new UniqueString();
 		String testString = "test";
-		assertEquals(problem.checkUniqueWithBitwise(testString), false);
+		assertFalse(problem.checkUniqueWithBitwise(testString));
 	}
 	
 	@Test
 	public void validThirdWayWithNonUnique() {
 		UniqueString problem = new UniqueString();
 		String testString = "abcde";
-		assertEquals(problem.checkUniqueWithBitwise(testString), true);
+		assertTrue(problem.checkUniqueWithBitwise(testString));
 	}
 	
 }
