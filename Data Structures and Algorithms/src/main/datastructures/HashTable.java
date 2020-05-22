@@ -1,5 +1,7 @@
 package main.datastructures;
 
+import main.datastructures.exceptions.ElementNotPresentException;
+
 /**
  * Implementation of hash table
  * @author Akshay Kumar
@@ -61,19 +63,6 @@ public class HashTable {
 		return (key.hashCode() & 0x7fffffff) % INITIAL_SIZE;
 	}
 	
-	/**
-	 * Exception to be thrown when the element is not present in the hash table 
-	 *
-	 */
-	public class ElementNotPresentException extends Exception {
-		/**
-		 * 
-		 */
-		private static final long serialVersionUID = 1L;
-
-		ElementNotPresentException() {
-			super("Entered key is not present in the Hash Table");
-		}
-	}
+	
 	
 }

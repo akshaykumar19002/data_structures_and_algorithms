@@ -5,7 +5,7 @@ import static org.junit.Assert.assertSame;
 import org.junit.Test;
 
 import main.datastructures.HashTable;
-import main.datastructures.HashTable.ElementNotPresentException;
+import main.datastructures.exceptions.ElementNotPresentException;
 
 public class TestHashTable {
 

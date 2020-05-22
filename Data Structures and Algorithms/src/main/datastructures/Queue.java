@@ -1,5 +1,7 @@
 package main.datastructures;
 
+import main.datastructures.exceptions.EmptyQueueException;
+
 /**
  * Queue
  * @author Akshay Kumar
@@ -54,17 +56,5 @@ public class Queue {
 	public boolean isEmpty() {
 		return this.head.isEmpty();
 	}
-	
-	/**
-	 * EmptyQueueException
-	 * @author Akshay Kumar
-	 *
-	 */
-	public class EmptyQueueException extends Exception {
 		
-		public EmptyQueueException() {
-			super("Queue is empty");
-		}
-	}
-	
 }
