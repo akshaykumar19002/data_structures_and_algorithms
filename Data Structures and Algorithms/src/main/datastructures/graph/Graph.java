@@ -13,14 +13,16 @@ public class Graph {
 	
 	private List<LinkedList<Integer>> adjacencyList;
 	private Integer capacity;
+	private boolean directed;
 
 	/**
 	 * Initializes the adjacency list based to the specified number of nodes
 	 * @param noOfNodes - no of vertices in the graph
 	 */
-	public Graph(Integer noOfNodes) {
+	public Graph(Integer noOfNodes, boolean directed) {
 		this.adjacencyList = new ArrayList<LinkedList<Integer>>();
 		this.capacity = noOfNodes;
+		this.directed = directed;
 		for (int i=0; i<capacity; i++)
 			adjacencyList.add(new LinkedList<Integer>());
 	}
@@ -40,7 +42,8 @@ public class Graph {
 	 */
 	public void addEdge(Integer a1, Integer a2) {
 		adjacencyList.get(a1).add(a2);
-		adjacencyList.get(a2).add(a1);
+		if (!directed)
+			adjacencyList.get(a2).add(a1);
 	}
 	
 	/**
@@ -50,7 +53,8 @@ public class Graph {
 	 */
 	public void removeEdge(Integer a1, Integer a2) {
 		adjacencyList.get(a1).remove(a2);
-		adjacencyList.get(a2).remove(a1);
+		if (!directed)
+			adjacencyList.get(a2).remove(a1);
 	}
 	
 	/**
