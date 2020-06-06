@@ -1,4 +1,4 @@
-package main.datastructures.tree;
+package main.datastructures.models;
 
 public class BinaryTreeNode {
 	

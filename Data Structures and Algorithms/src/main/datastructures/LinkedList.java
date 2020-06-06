@@ -2,22 +2,14 @@ package main.datastructures;
 
 import java.util.NoSuchElementException;
 
+import main.datastructures.models.Node;
+
 /**
  * Singly LinkedList
  * @author Akshay Kumar
  *
  */
 public class LinkedList {
-
-	private class Node {
-		Object data;
-		Node next;
-		
-		Node(Object value) {
-			this.data = value;
-			this.next = null;
-		}
-	}
 	
 	Node head;
 	
@@ -302,6 +294,10 @@ public class LinkedList {
 			temp = temp.next;
 		}
 		return newList;
+	}
+
+	public Node getHead() {
+		return head;
 	}
 	
 }

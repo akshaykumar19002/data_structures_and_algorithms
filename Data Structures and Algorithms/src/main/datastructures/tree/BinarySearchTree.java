@@ -1,5 +1,6 @@
 package main.datastructures.tree;
 
+import main.datastructures.models.BinaryTreeNode;
 
 /**
  * Binary Search Tree implementation only for String and Integer type
